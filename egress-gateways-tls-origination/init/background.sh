@@ -21,7 +21,8 @@ cp /root/istio-${ISTIO_VERSION}/tools/istioctl.bash ./istioctl.bash
 echo "source ~/istioctl.bash" >> ~/.bashrc
 # Deploy Istio with demo profile
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
-istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
+# istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
+istioctl install --set profile=demo -y
 touch /ks/.istiofinished
 
 # Init scenario
